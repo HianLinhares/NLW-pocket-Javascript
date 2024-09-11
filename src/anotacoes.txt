@@ -1,0 +1,12 @@
+///
+Node.js = Ambiente executável de javascript
+Git = controle de versão de um projeto 
+
+///
+Criar metas
+Listar metas
+Marcar/Desmarcar metas realizadas
+Remover metas
+sistemas de mensagens
+
+///
