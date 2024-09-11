@@ -18,3 +18,4 @@ let metasArray = [
 
 
 console.log(metasArray)
+console.log(metas)
