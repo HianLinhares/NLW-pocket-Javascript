@@ -1,21 +1,52 @@
+
+const {select} = 
+require('@inquirer/prompts')
+
 let metas = {
-    value: "ler um livro",
-    checked: true,
+    value: 'Tomar água todos os dias',
+    checked: false,
 }
 
-let metasArray = [ 
-    {
-        meta: "ir a academia 4 dias na semana",
-        checked: false,
-        data_limited: "10/09/2024"
-    } ,
-    {
-        meta: "correr 4 dias na semana",
-        checked: false,
-        data_limited: "15/09/2024"
-    } 
-]
+
+const cadastrarMeta = async () => {
+    const meta = await input ({message: "Digite sua meta"})
+
+    metas.push({value: meta, checked:false})
+
+}
+
+const start = async () =>{
+    while(true){
+        const opcao = await select({
+            message: 'Menu >',
+            choices: [
+                {
+                    name: "Cadastrar meta",
+                    value: "Cadastrar"
+                },
+                {
+                    name: "Sair",
+                    value: "Sair"
+                },
+            ]
+        })
+
+       
+        switch(opcao){
+            case "Cadastrar":
+            console.log('Vamos cadastrar')
+            break
+            case "Listar":
+            console.log('Vamos listar')
+            break
+            case "Sair":
+            console.log('Até a próxima')
+            break
+        }
+    }
+ 
+}
 
 
-console.log(metasArray)
-console.log(metas)
+
+start()
